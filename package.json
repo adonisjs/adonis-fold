@@ -57,6 +57,7 @@
     "@japa/assert": "^3.0.0",
     "@japa/file-system": "^2.3.0",
     "@japa/runner": "^3.1.4",
+    "@release-it/conventional-changelog": "^9.0.3",
     "@swc/core": "^1.9.3",
     "@types/node": "^20.17.8",
     "benchmark": "^2.1.4",
@@ -87,14 +88,26 @@
   },
   "release-it": {
     "git": {
+      "requireCleanWorkingDir": true,
+      "requireUpstream": true,
       "commitMessage": "chore(release): ${version}",
       "tagAnnotation": "v${version}",
+      "push": true,
       "tagName": "v${version}"
     },
     "github": {
-      "release": true,
-      "releaseName": "v${version}",
-      "web": true
+      "release": true
+    },
+    "npm": {
+      "publish": true,
+      "skipChecks": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": {
+          "name": "angular"
+        }
+      }
     }
   },
   "repository": {
