@@ -43,7 +43,9 @@
   "license": "MIT",
   "keywords": [
     "ioc",
-    "container"
+    "container",
+    "dependency-injection",
+    "di"
   ],
   "author": "Harminder Virk <virk@adonisjs.com>",
   "devDependencies": {
