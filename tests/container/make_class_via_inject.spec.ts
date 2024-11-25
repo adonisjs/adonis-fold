@@ -461,8 +461,10 @@ test.group('Container | Make class with contextual bindings', () => {
 
     class Foo {}
 
-    abstract class Hash {
-      abstract make(value: string): string
+    class Hash {
+      make(value: string): string {
+        return value.toUpperCase()
+      }
     }
 
     @inject()
@@ -484,6 +486,7 @@ test.group('Container | Make class with contextual bindings', () => {
 
     const controller = await container.make(UsersController)
     expectTypeOf(controller).toEqualTypeOf<UsersController>()
+
     assert.instanceOf(controller.hash, Hash)
   })
 
