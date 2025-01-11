@@ -37,8 +37,7 @@
     "version": "npm run build",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "sync-labels": "github-label-sync --labels .github/labels.json adonisjs/fold"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@poppinss/utils": "^6.9.2"
@@ -61,7 +60,6 @@
     "del-cli": "^6.0.0",
     "eslint": "^9.18.0",
     "expect-type": "^1.1.0",
-    "github-label-sync": "^2.3.1",
     "husky": "^9.1.7",
     "p-event": "^6.0.1",
     "prettier": "^3.4.2",
